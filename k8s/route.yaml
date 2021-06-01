@@ -3,6 +3,7 @@ kind: Route
 metadata:
   annotations:
     description: Route for application's http service.
+    argocd.argoproj.io/sync-options: Validate=false
   labels:
     application: nationalparks
   name: nationalparks
