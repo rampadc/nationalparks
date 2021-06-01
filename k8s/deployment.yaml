@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nationalparks
+spec:
+  selector:
+    matchLabels:
+      app: nationalparks
+  template:
+    metadata:
+      labels:
+        app: nationalparks
+    spec:
+      containers:
+      - name: nationalparks
+        image: nationalparks/image
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080

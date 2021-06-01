@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Route
+metadata:
+  annotations:
+    description: Route for application's http service.
+  labels:
+    application: nationalparks
+  name: nationalparks
+spec:
+  to:
+    name: nationalparks
+    kind: Service
+  tls:
+    termination: edge
