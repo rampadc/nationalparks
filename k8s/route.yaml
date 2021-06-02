@@ -6,6 +6,7 @@ metadata:
     argocd.argoproj.io/sync-options: Validate=false
   labels:
     application: nationalparks
+    type: parksmap-backend
   name: nationalparks
 spec:
   to:
